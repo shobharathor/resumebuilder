@@ -102,27 +102,7 @@ body {
     background-color: #218838;
   }
 
- /* STYLING OF RESUMEOUT 1. MINIMALIST */
-
-  #resumeOutput{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-    border: 2px solid black;
-    width : 60%;
-    padding: 20px 20px;
-    gap: 10px;
-    position: relative;
-    /* background: linear-gradient(to right, #c0e991, #f7ef96 , #fcb4f7); */
-    margin: auto;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-   
-  }
-  .heading{
+.heading{
     padding: 50px;
     width: 100%;
     display: flex;
@@ -139,16 +119,63 @@ body {
     height: 100px;
     top: 3%;
     left:80%;
+  }
+
+
+
+  /* minimalais css style --------------------------------------*/
     
+  #minimalist {
+    width: 70%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease forwards;
+    padding: 30px 50px;
+    font-size: 20px;
+    
+  
   }
-  #Address{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background-color: #c4f6ad;
-    font-size: 15px;
-    padding: 10px;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
+  
+  .profile-mini{
+   color: rgb(4, 5, 5);
+   font-style: italic;
+   width: 100%;
+   padding: 20px 10px;
+   font-size: 25px;
+  }
+  .profile-mini > p{
+    font-size: 20px;
+  } 
+  
+  #other > h3{
+    text-decoration: underline;
+    font-weight: bolder;
+    color: black;
+  }
+  .minimalist-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  
+  
+  
+  
+  
   #profile{
     width:100%;
     padding: 10px 10px;
@@ -173,32 +200,23 @@ body {
     padding: 10px 10px;
     border: 2px solid black;
     border-radius: 10px;
+  
   }
   #education > h3{
     color: black;
 
   }
   #sub-div{
-    padding: 10px 10px;
+    padding: 15px 10px;
     display: flex;
-    justify-content: space-around;
-
-  }
-  #sub-id2{
-    padding: 10px 10px;
-    display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
+    text-align: left;
+    gap: 10px;
   }
 
-  #sub-id3{
-    padding: 10px 10px;
-    display: flex;
-    justify-content: space-around;
-
-  }
-  #work{
+#work{
     width:100%;
-    padding: 10px 10px;
+    padding: 15px 15px;
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -206,16 +224,10 @@ body {
     color: black;
 
   }
-  #work1{
+ #work2{
     padding: 15px 10px;
     display: flex;
-    justify-content: 
-
-  }
-  #work2{
-    padding: 15px 10px;
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
   }
   #other{
@@ -233,7 +245,7 @@ body {
     border: 2px solid black;
     border-radius: 10px;
     display: flex;
-    gap: 20px;
+    justify-content: space-around;
   
 
   }
@@ -247,193 +259,125 @@ body {
     border: 2px solid black;
     border-radius: 10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     list-style: none;
-  }
 
-  .hobbies > h3{
+  }
+  .hobbies > ul{
+     display: flex;
+     justify-content: space-evenly;
+     width:40%;
+  }
+ 
+ .hobbies > h3{
      text-decoration: underline;
      font-family: cursive;
   }
+/* end of styling of minimalist ------------------------*/
 
-
-  /*STYLING OF NEXT RESUME TWO COLUMN */
+/*STYLING OF NEXT RESUME TWO COLUMN------------------------ */
 #two-column{
-    width: 80%;
+    width: 850px;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 5px;
+    justify-content: center;
+    padding: 5px 5px;
     margin: auto;
+    gap: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease forwards;
+   
   }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .left{
-     width: 40%;
-     align-items: center;
-     margin-top: 10px;
-     
-    
-  
+    width:350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: antiquewhite;
+    padding: 15px 15px;
+}
+.language{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: underline;
+}
+
+ .language > ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+ }
+.image{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-   .minimalist-img{
+
+  .image > img{
      width: 100px;
      height: 100px;
      border-radius: 50%;
-   }
-
-
-  .image{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 30px;
-    gap: 10px;
- }
- #two-column-img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
- }
-
-  .summary{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    align-items: center;
-    text-align: justify;
-    gap: 20px;
-    
   }
 
-  .summary > h3{
-    text-decoration: underline;
-  }
- 
-   .language{
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    justify-content: center;
-    text-align: justify;
-    gap: 40px;
-  }
-
-  .language > h3{
-    text-decoration: underline;
-  }
-  
   .right{
-    width: 50%;
-    padding: 5px 15px;
-    display:flex;
-    flex-direction: column;
-    gap: 60px;
-    justify-content: center;
-    font-size: 20px;
-    align-items: center;
-  
-  }
-
-  .name > h3{
-    color: black;
-    text-decoration: underline;
-  }
-  .Experience{
+    width:350px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  
-  }
-  .Experience > h3{
-     text-decoration: underline;
-  }
+    gap: 20px;
+    padding: 30px 20px;
 
-  .exp-3 > p{
-    text-decoration: underline;
-  }
+} 
+.exp-1{
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  gap:2px;
+} 
 
 
-  .education{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items:  center;
-    justify-content: center;
-    width: 100%;
-  }
+.exp-1 > ul{
+  list-style: none;
 
-   .education > h3{
-     text-decoration: underline;
-     align-items: center;
-     text-decoration: underline;
-     font-weight: bolder;
-     color: black;
-   }
-
-   .sub-div1{
-     display: flex;
-     flex-direction: column;
-     justify-content: flex-start;
-     align-items: flex-start;
-     gap: 20px;
-      
-      
-   }
-.skills{
-    display: flex;
-    justify-content: center;
-    padding: 10px 10px;
-    gap: 10px;
-    text-decoration: underline;
- }
-.box{
-   border: 2px solid black;
-   align-items: center;
-   padding: 10px 10px;
-}
-#minimalist {
-  width: 70%;
-  margin: 50px auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease forwards;
-  
 
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.profile-mini{
- color: rgb(4, 5, 5);
- font-style: italic;
- width: 100%;
- border: 2px solid black;
-  
-}
-
-.profile-mini > h3{
-   text-decoration: underline;
-   font-weight: bolder;
-}
-  
-#other > h3{
+.sub-div1{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   text-decoration: underline;
-  font-weight: bolder;
-  color: black;
+}
+.skills{
+  text-decoration: underline;
 }
 
 
 
+
+
+  
+  
+  
+  
+ 
+ 
+
+ 
 
 
 

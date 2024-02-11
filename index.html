@@ -45,18 +45,11 @@
         <textarea id="profile"></textarea>
       </fieldset>
 
-      <fieldset>
-        <legend>languages</legend>
-        <label for="languages" id="languages">languages</label>
-        <input type="text" id="lang-1" placeholder="language-1" />
-        <input type="text" id="lang-2" placeholder="language-2" />
-        <input type="text" id="lang-3" placeholder="language-3" />
-      </fieldset>
 
 
 
       <!-- education details -->
-      <input>
+    
       <legend>Education</legend>
       <label for="eduDegree">12th:</label>
       <input type="text" id="12"></input>
@@ -142,6 +135,10 @@
     </form>
     <button id="downloadButton" style="display: none;">Download Resume</button>
   </div>
+ 
+ 
+ 
+ 
   <!-- resume 1 -->
   <div id="minimalist">
     <div id="minimalist-heading2" class="heading">
@@ -167,17 +164,17 @@
         <p><strong>Institution:</strong> <span id="minimalist-12institution"></span></p>
         <p><strong>Year:</strong> <span id="minimalist-12yr"></span></p>
       </div>
-      <div id="sub-id2">
+      <div id="sub-div">
         <p><strong>Bachelor:</strong> <span id="minimalist-bachelor"></span></p>
         <p><strong>Institution:</strong> <span id="minimalist-bInst"></span></p>
         <p><strong>Year:</strong> <span id="minimalist-bYear"></span></p>
       </div>
-      <div id="sub-id3">
+      <div id="sub-div">
         <p><strong>Master:</strong> <span id="minimalist-master"></span></p>
         <p><strong>Institution:</strong> <span id="minimalist-masterInst"></span></p>
         <p><strong>Year:</strong> <span id="minimalist-masterYear"></span></p>
       </div>
-      <div id="other">
+      <div id="sub-div">
         <h3>Other</h3>
         <p id="minimalist-other"></p>
       </div>
@@ -187,7 +184,7 @@
 
     <div id="work">
       <h3>Work Experience</h3>
-      <div id="work1">
+      <div id="work2">
         <p><strong>Job Title:</strong><span id="minimalist-jt1"></span></p>
         <p><strong>Employer:</strong><span id="minimalist-employer1"></span></p>
         <p><strong>Year:</strong><span id="minimalist-year1"></span></p>
@@ -199,11 +196,10 @@
         <p><strong>Year:</strong><span id="minimalist-year2"></span></p>
       </div>
 
-      <div id="other">
-        <h3>Other</h3>
-        <p id="minimalist-work-other"></p>
+      <div id="work2">
+      <p><strong>Others:</strong><span id="minimalist-work-other"></span></p>
       </div>
-    </div>
+      </div>
 
     <div class="skills1">
       <h3>skills</h3>
@@ -228,7 +224,7 @@
     </div>
 
     <div class="hobbies">
-      <h3>HOBBIES</h3>
+      <h3>Hobbies</h3>
       <ul>
         <li id="minimalist-hobbies1"></li>
         <li id="minimalist-hobbies2"></li>
@@ -236,7 +232,9 @@
       </ul>
     </div>
   </div>
-  <!-- second resume -->
+
+
+  <!-- second resume ------------------------------------------------------------->
   <div id="two-column">
     <div id="two-column">
       <div id="heading2" class="left">
@@ -248,13 +246,12 @@
         </div>
         <div class="summary">
           <h3>profile</h3>
-          <p id="two-column-profile">\</p>
+          <p id="two-column-profile"></p>
         </div>
 
         <div class="language">
           <h3>language</h3>
-
-          <ul>
+           <ul>
             <li id="two-column-lang1"></li>
             <li id="two-column-lang2"></li>
             <li id="two-column-lang3"></li>
@@ -276,29 +273,29 @@
         <div class="name">
           <h3 id="two-column-name"></h3>
         </div>
+        
+        
         <div class="Experience">
           <h3>Experience</h3>
           <div class="exp-1">
-            <p id="two-column-jt1"></p>
-            <ul>
-              <li id="two-column-employer1"></li>
-              <li id="two-column-year1"></li>
-            </ul>
-          </div>
-          <div class="exp-2">
-            <p id="two-column-jt2"></p>
-            <ul>
-              <li id="two-column-employer2"></li>
-              <li id="two-column-year2"></li>
-            </ul>
-          </div>
-          <div class="exp-3">
-            <p>Other</p>
-            <ul>
-              <li id="two-column-work-other"></li>
-            </ul>
+            <h6>Job Title:</h6><p id="two-column-jt1"></p>
+            <h6>Employer:</h6><p id="two-column-employer1"></p>
+            <h6>Year:</h6><p id="two-column-year1"></p>
+            </div>
+          <div class="exp-1">
+            <h6>Job Title:</h6><p id="two-column-jt2"></p>
+            <h6>Employer:</h6><p id="two-column-employer2"></p>
+            <h6>Year:</h6><p id="two-column-year2"></p>
+            </div>
+          <div class="exp-1">
+            <h6>Other</h6> <p id="two-column-work-other"></p>
+         
           </div>
         </div>
+       
+       
+       
+       
         <div class="education">
           <h3>Education</h3>
           <div class="sub-div1">
@@ -312,9 +309,9 @@
             <p><strong>Institution:</strong> <span  id="two-column-masterInst"></span></p>
             <p><strong>Year:</strong><span  id="two-column-masterYear"> </span></p>
           </div>
-          <div id="other">
-            <h3>Other</h3>
-            <p id="two-column-other"></p>
+          <div id="sub-div1">
+          <p><strong>Other:</strong><span  id="two-column-other"> </span></p>
+            <!-- <p id="two-column-other"></p> -->
           </div>
         </div>
         <div class="skills">

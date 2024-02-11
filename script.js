@@ -31,7 +31,7 @@ const element = [
   "hobbies2",
   "hobbies3",
 ];
-let headerColor = null;
+// let headerColor = null;
 let output = "minimalist";
 let selected = document.getElementById("myselect");
 document.getElementById("headerColor").addEventListener("input", function () {
@@ -52,6 +52,7 @@ function setData(element) {
   document.getElementById(output + "-" + element).innerHTML =
     document.getElementById(element)?.value;
 }
+
 
 
 document
