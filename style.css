@@ -279,7 +279,7 @@ body {
 #two-column{
     width: 850px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 5px 5px;
     margin: auto;
     gap: 40px;
@@ -343,19 +343,11 @@ body {
 
 } 
 .exp-1{
-  font-size: 28px;
+  font-size: 5px;
   display: flex;
   flex-direction: column;
   gap:2px;
 } 
-
-
-.exp-1 > ul{
-  list-style: none;
-
-
-}
-
 .sub-div1{
   display: flex;
   flex-direction: column;

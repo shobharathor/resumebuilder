@@ -67,8 +67,10 @@ document
     debugger
     document.getElementById(output+'-'+'img').src =URL.createObjectURL(
       document.getElementById("picture").files[0]
-    )
-    ;
+    );
+    debugger;
+    document.getElementById(output + "-" + "heading2").style.backgroundColor = headerColor;
+    document.getElementById("downloadButton").style.display = "block";
     // Gather form data
     // const data = {};
     // data.fullName = document.getElementById("fullName").value;
@@ -116,24 +118,73 @@ document
     // data.picture = document.getElementById("picture").files[0];
     // document.getElementById("resumeContainer").innerHTML = getTemplate(data);
     // document.getElementById("heading2").style.backgroundColor = headerColor;
-    // document.getElementById("downloadButton").style.display = "block";
+    
   });
 
 document
   .getElementById("downloadButton")
   .addEventListener("click", function () {
-    const blob = new Blob([resumeOutput], { type: "text/html" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "resume.html";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    
+    const blob = new Blob([document.getElementById(output).outerHTML], { type: 'application/pdf' });
+    // var blobURL = URL.createObjectURL(blob);
+    var downloadLink = document.createElement('a');
+    downloadLink.href = URL.createObjectURL(blob);
+    downloadLink.download = 'downloaded_pdf.pdf';
+
+    // Trigger download
+    downloadLink.click();
+    
+    // const url = URL.createObjectURL(blob);
+    // const a = document.createElement("a");
+    // a.href = url;
+    // a.download = "resume.html";
+    // document.body.appendChild(a);
+    // a.click();
+    // document.body.removeChild(a);
+    // URL.revokeObjectURL(url
   });
 
-// function getTemplate(data) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // function getTemplate(data) {
 //   if (output == "minimalist") {
 //     // Generate resume output
 //     return `
