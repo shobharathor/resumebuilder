@@ -11,8 +11,11 @@ body {
     background-color: #f9f9f9;
      width: 100%;
      height: 100vh;
+     display: flex;
+     padding: 50px 10px;
+     justify-content: space-between;
   }
-  .parent{
+.parent{
     width: 100px;
   }
   
@@ -20,7 +23,7 @@ body {
     max-width: 800px;
     margin: 50px auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease forwards;
@@ -117,7 +120,6 @@ body {
     position: absolute;
     width: 100px;
     height: 100px;
-    top: 3%;
     left:80%;
   }
 
@@ -126,8 +128,8 @@ body {
   /* minimalais css style --------------------------------------*/
     
   #minimalist {
-    width: 70%;
-    margin: 50px auto;
+    width: 50%;
+    margin: auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -135,7 +137,8 @@ body {
     animation: fadeIn 0.5s ease forwards;
     padding: 30px 50px;
     font-size: 20px;
-    
+    height: 100%;
+  
   
   }
   @keyframes fadeIn {
@@ -170,13 +173,7 @@ body {
     height: 100px;
     border-radius: 50%;
   }
-  
-  
-  
-  
-  
-  
-  #profile{
+   #profile{
     width:100%;
     padding: 10px 10px;
     border: 2px solid black;
@@ -194,12 +191,14 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    flex-wrap: wrap;
   }
   #education{
-    width:100%;
+    min-height: 200px;
     padding: 10px 10px;
     border: 2px solid black;
     border-radius: 10px;
+    flex-wrap: wrap;
   
   }
   #education > h3{
@@ -212,6 +211,7 @@ body {
     justify-content:space-between;
     text-align: left;
     gap: 10px;
+    flex-wrap: wrap
   }
 
 #work{
@@ -261,12 +261,16 @@ body {
     display: flex;
     justify-content: space-around;
     list-style: none;
+    flex-wrap: wrap;
+    min-width: 200px;
 
   }
   .hobbies > ul{
      display: flex;
      justify-content: space-evenly;
      width:40%;
+     min-width: 200px;
+     min-width: 200px;
   }
  
  .hobbies > h3{
@@ -330,12 +334,15 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+   
   }
 
   .image > img{
      width: 100px;
      height: 100px;
      border-radius: 50%;
+     margin-left: 35%;
+
   }
 
   .right{
@@ -347,7 +354,7 @@ body {
 
 } 
 .exp-1{
-  font-size: 5px;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   gap:2px;
