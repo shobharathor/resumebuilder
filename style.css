@@ -140,11 +140,11 @@ body {
   }
   @keyframes fadeIn {
     from {
-      opacity: 0;
+      /* opacity: 0; */
       transform: translateY(-20px);
     }
     to {
-      opacity: 1;
+      /* opacity: 1; */
       transform: translateY(0);
     }
   }
@@ -274,8 +274,10 @@ body {
      font-family: cursive;
   }
 /* end of styling of minimalist ------------------------*/
-
 /*STYLING OF NEXT RESUME TWO COLUMN------------------------ */
+
+
+
 #two-column{
     width: 850px;
     display: flex;
@@ -287,21 +289,23 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease forwards;
+    border: 1px solid black;
+    background-color: #fff;
    
   }
   @keyframes fadeIn {
     from {
-      opacity: 0;
+      /* opacity: 0; */
       transform: translateY(-20px);
     }
     to {
-      opacity: 1;
+      /* opacity: 1; */
       transform: translateY(0);
     }
   }
 
   .left{
-    width:350px;
+    width:450px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -335,7 +339,7 @@ body {
   }
 
   .right{
-    width:350px;
+    width:500px;
     display: flex;
     flex-direction: column;
     gap: 20px;

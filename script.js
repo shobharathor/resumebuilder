@@ -64,11 +64,11 @@ document
     }
     
     const reader = new FileReader();
-    debugger
+    
     document.getElementById(output+'-'+'img').src =URL.createObjectURL(
       document.getElementById("picture").files[0]
     );
-    debugger;
+  
     document.getElementById(output + "-" + "heading2").style.backgroundColor = headerColor;
     document.getElementById("downloadButton").style.display = "block";
     // Gather form data
@@ -121,28 +121,6 @@ document
     
   });
 
-document
-  .getElementById("downloadButton")
-  .addEventListener("click", function () {
-    
-    const blob = new Blob([document.getElementById(output).outerHTML], { type: 'application/pdf' });
-    // var blobURL = URL.createObjectURL(blob);
-    var downloadLink = document.createElement('a');
-    downloadLink.href = URL.createObjectURL(blob);
-    downloadLink.download = 'downloaded_pdf.pdf';
-
-    // Trigger download
-    downloadLink.click();
-    
-    // const url = URL.createObjectURL(blob);
-    // const a = document.createElement("a");
-    // a.href = url;
-    // a.download = "resume.html";
-    // document.body.appendChild(a);
-    // a.click();
-    // document.body.removeChild(a);
-    // URL.revokeObjectURL(url
-  });
 
 
 
@@ -158,224 +136,70 @@ document
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // function getTemplate(data) {
-//   if (output == "minimalist") {
-//     // Generate resume output
-//     return `
-//     <div id="resumeOutput">
-//   <div id = "heading2" class= "heading">
-//   <h2>${data.fullName}</h2>
-//    <img class="round-img" src="${URL.createObjectURL(
-//      data.picture
-//    )}" alt="User's Picture"></p>
-//    </div>
+    document.getElementById("downloadButton").addEventListener("click", function () {
+       console.log("shobha");
+    var element = document.getElementById(output).innerHTML;
+    console.log("outputis", element);
    
-//    <div id = "Address">
-//     <p><strong>Address:</strong>${data.address}</p>
-//    <p><strong>Email:</strong>${data.email}</p>
-//    <p><strong>Phone:</strong>${data.phone}</p>
-//    </div>
-
-//    <div id = "profile">
-//    <h3>Profile</h3>
-//    <p>${data.profile}</p>
-//     </div>
-   
-//    <div id ="education">
-//   <h3>Education</h3>
-//   <div id ="sub-div">
-//       <p><strong>12th:</strong>${data.eduDegree}</p>
-//        <p><strong>Institution:</strong> ${data.eduInstitution}</p>
-//       <p><strong>Year:</strong> ${data.eduYear}</p>
-//       </div>
-//    <div id = "sub-id2">
-//    <p><strong>Bechlor:</strong> ${data.eduDegree1}</p>
-//    <p><strong>Institution:</strong> ${data.eduInstitution1}</p>
-//    <p><strong>Year:</strong> ${data.eduYear1}</p>
-//    </div>
-//    <div id = "sub-id3">
-//    <p><strong>Master:</strong> ${data.eduDegree3}</p>
-//    <p><strong>Institution:</strong> ${data.eduInstitution3}</p>
-//    <p><strong>Year:</strong> ${data.eduYear3}</p>
-//    </div>
-//    <div id ="other">
-//    <h3>Other</h3>
-//    <p>${data.other}</p>                        
-//    </div>
-//     </div>
+       html2pdf(element);
+var opt = {
+  margin:       1,
+  filename:     'myfile.pdf',
+  image:        { type: 'jpeg', quality: 0.98 },
+  html2canvas:  { scale: 1 },
+  jsPDF:        { unit: 'in', format: 'A4', orientation: 'landscape' }
+};
+html2pdf().from(element).set(opt).save();
    
    
-   
-//     <div id="work">
-//    <h3>Work Experience</h3>
-//     <div id="work1">
-//    <p><strong>Job Title:</strong>${data.jobTitle}</p>
-//    <p><strong>Employer:</strong>${data.employer}</p>
-//    <p><strong>Year:</strong>${data.workYear}</p>
-//    </div>
-   
-//    <div id="work2">
-//    <p><strong>Job Title:</strong>${data.jobTitle1}</p>
-//    <p><strong>Employer:</strong>${data.employer1}</p>
-//    <p><strong>Year:</strong>${data.workYear1}</p>
-//    </div>
-   
-//    <div id ="other">
-//    <h3>Other</h3>
-//    <p>${data.other}</p>                        
-//    </div>
-//    </div>
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-// <div class="skills1">
-// <h3>skills</h3>
-//           <div class="box">
-//             <h3>${data.skills1}</h3>
-//           </div>
-//           <div class="box">
-//             <h3>${data.skills2}</h3> 
-//           </div>
-//           <div class="box">
-//             <h3>${data.skills3}</h3> 
-//           </div>
-//         </div>
-
-//         <div class="hobbies">
-//         <h3>language</h3>
-//         <li>${data.language1}</li>
-//         <li>${data.language2}</li>
-//         <li>${data.language3}</li>
-//         </div>
-
-//         <div class="hobbies">
-//         <h3>HOBBIES</h3>
-//         <li>${data.hobbies1}</li>
-//         <li>${data.hobbies2}</li>
-//         <li>${data.hobbies3}</li>
-//         </div>
-// </div>
-//  `;
-//   } else if (output == "two-column") {
-//     // Generate resume output
-//     return `
-//    <div id="nextresume">
-//       <div id = "heading2"  class="left">
-//         <div class="image">
-//           <img  class= "minimalist-img"src="${URL.createObjectURL(
-//             data.picture
-//           )}" alt="User's Picture"></img>
-//           <i class="ri-phone-fill">${data.phone}</i>
-//           <i class="ri-mail-line">${data.email}</i>
-//           <i class="ri-map-pin-line">${data.address}</i>
-//         </div>
-//         <div class="summary">
-//           <h3>profile</h3>
-//           <p>${data.profile}</p>
-//         </div>
-      
-//         <div class="language">
-//           <h3>language</h3>
-//           <li>${data.language1}</li>
-//           <li>${data.language2}</li>
-//           <li>${data.language3}</li>
-//           </div>
-
-//           <div class="language">
-//           <h3>HOBBIES</h3>
-//           <li>${data.hobbies1}</li>
-//           <li>${data.hobbies2}</li>
-//           <li>${data.hobbies3}</li>
-//           </div>
-          
-//       </div>
-
-//       <div class="right">
-//         <div class="first">
-//           <h3>${data.fullName}</h3>
-//         </div>
-//         <div class="Experience">
-//             <h3>Experience</h3>
-//             <div class="exp-1">
-//             <p>${data.jobTitle}</p>
-//             <li>${data.employer}</li>
-//             <li>${data.employer}</li>
-//           </div>
-//           <div class="exp-2">
-//             <p>${data.jobTitle1}</p>
-//             <li>${data.employer1}</li>
-//             <li>${data.workYear1}</li>
-//           </div>
-//           <div class="exp-3">
-//             <p>Other</p>
-//             <li>${data.other}</li>
-//             </div>
-//         </div>
-//         <div class ="education">
-//         <h3>Education</h3>
-//        <div class ="sub-div1">
-//        <p><strong>12th:</strong>${data.eduDegree}</p>
-//         <p><strong>Institution:</strong> ${data.eduInstitution}</p>
-//        <p><strong>Year:</strong> ${data.eduYear}</p>
-//        <p><strong>Bechlor:</strong> ${data.eduDegree1}</p>
-//       <p><strong>Institution:</strong> ${data.eduInstitution1}</p>
-//       <p><strong>Year:</strong> ${data.eduYear1}</p>
-//       <p><strong>Master:</strong> ${data.eduDegree3}</p>
-//     <p><strong>Institution:</strong> ${data.eduInstitution3}</p>
-//     <p><strong>Year:</strong> ${data.eduYear3}</p>
-//     </div>
-//     <div id ="other">
-//     <h3>Other</h3>
-//     <p>${data.other}</p>                        
-//     </div>
-//      </div>
-    
-       
-       
-       
-       
-       
-       
-       
-//         <div class="skills">
-//         <h3>skills</h3>
-//           <div class="box">
-//             <h3>${data.skills1}</h3>
-//           </div>
-//           <div class="box">
-//             <h3>${data.skills2}</h3> 
-//           </div>
-//           <div class="box">
-//             <h3>${data.skills3}</h3> 
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-
-//   `;
-//   }
-// }
